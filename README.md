@@ -27,6 +27,24 @@ This is the README for the second project.
 ### Retaining 25.0% Coefficients
 - Accuracy (Mean � Std): 0.0163 � 0.0632
 - PSNR: 26.93 dB
+
+# Fine-Tuned Models
+
+## Classification Baselines
+- resnet18_finetuned.pth
+- mobilenet_v2_finetuned.pth
+
+## Few-Shot Model
+- protonet_trained.pth (MobileNetV2-based encoder)
+
+## Performance Summary
+- 5-way 1-shot Accuracy: 50.88% ± 11.16%
+- 5-way 5-shot Accuracy: 67.40% ± 11.92%
+
+## Notes
+- All models trained on Mini-ImageNet
+- Evaluation done over 100 episodes
+- ResNet used 96×96 input, MobileNet used 64×64
 - Compression Ratio: 3.99
 
 ### Retaining 50.0% Coefficients
