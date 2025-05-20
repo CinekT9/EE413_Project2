@@ -1,0 +1,8 @@
+/mini-imagenet/
+test.tar
+train.tar
+val.tar
+resnet18_finetuned.pth
+protonet_trained.pth
+mobilenet_v2_finetuned.pth
+compressed_trained.pth
