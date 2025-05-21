@@ -16,7 +16,18 @@
 - Evaluation done over 100 episodes
 - ResNet used 96×96 input, MobileNet used 64×64
 
-# Wavelet-based Image Compression Results
+# Wavelet-based Image Compression 
+
+## Overview
+This project evaluates ResNet18 and MobileNetV2 on a classification task using wavelet-based image compression at retention rates of 10%, 25%, and 50%. It measures accuracy, PSNR, and compression ratio on a custom dataset.
+
+## Code Structure
+- **Imports**: PyTorch, torchvision, PyWavelets for compression.
+- **Data Loading**: Custom `ClassificationDataset` with transforms (resize, normalize).
+- **Models**: Loads fine-tuned ResNet18 and MobileNetV2 (100 classes).
+- **Wavelet Compression**: Applies 2-level 'db1' wavelet transform, retaining specified coefficient percentages.
+- **Evaluation**: Measures classification accuracy, PSNR, and compression ratio on compressed images.
+- **Results**: Saves metrics to `compression_results.md`.
 
 ## Standard Classification (ResNet18)
 ### Retaining 10.0% Coefficients
