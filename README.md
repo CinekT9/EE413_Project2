@@ -48,3 +48,25 @@
 - Accuracy (Mean ± Std): 0.0139 ± 0.0543
 - PSNR: 36.15 dB
 - Compression Ratio: 2.00
+#  Fine-Tuning MobileNetV2 on Compressed Data
+## Overview
+Fine-tunes MobileNetV2 on Mini-ImageNet using wavelet compression, evaluating performance on compressed and uncompressed data.
+## Code Structure
+- **Imports**: PyTorch, torchvision, wavelet compression libraries.
+- **Wavelet Compression**: Applies 25% compression via `apply_wavelet_compression`.
+- **Model**: Modifies MobileNetV2 classifier (1280 features).
+- **Data**: Loads Mini-ImageNet (resize 96x96, normalize).
+- **Training**: 10 epochs, SGD, CrossEntropyLoss on compressed data.
+- **Evaluation**: Tests on uncompressed and compressed validation data.
+- ## Usage
+1. Set dataset path (`data_dir`).
+2. Run:
+   ```bash
+   python script_name.py
+   ```
+3. Model saved as `compressed_trained.pth`.
+4. Prints accuracy for uncompressed/compressed data.
+
+## Results
+- Uncompressed Accuracy: 0.37%
+- Compressed Accuracy (25%): 1%
